@@ -28,7 +28,7 @@ const reducer = (state, action) => {
 const DataProvider = ({ children }) => {
 	const [store, dispatch] = useReducer(reducer, getFromLocalStorage());
 	saveToLocalStorage(store);
-	console.log(store);
+	// console.log(store);
 	return (
 		<DataContext.Provider value={{ store, dispatch }}>
 			{children}
