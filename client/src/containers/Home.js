@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useStore } from "../context/DataProvider";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { getAllBooksApi } from "../context/api";
 import { Modal } from "../components/Modal";
 
@@ -21,11 +21,11 @@ function dateFormatter(date) {
 export const Home = () => {
 	const { store, dispatch } = useStore();
 	const { userData: user } = store;
-	const navigate = useNavigate();
+	// const navigate = useNavigate();
 	const [books, setBooks] = useState([]);
 	// useEffect(() => {
-	if (!store.userData.token) navigate("/login");
-	// }, []);
+	// if (!store.userData.token) navigate("/login");
+	// // }, []);
 
 	const [filterText, setFilterText] = useState("");
 	const [filterBy, setFilterBy] = useState("");
@@ -47,7 +47,7 @@ export const Home = () => {
 
 	const handleLogout = () => {
 		dispatch({ type: "LOGOUT" });
-		navigate("/login");
+		// navigate("/login");
 	};
 	const handlefilterText = (e) => {
 		const value = e.target.value.toLowerCase();

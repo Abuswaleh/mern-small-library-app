@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useStore } from "../context/DataProvider";
 import { loginApi, signupApi } from "../context/api";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
 	const { store, dispatch } = useStore();
-	const navigate = useNavigate();
+	// const navigate = useNavigate();
 	// useEffect(() => {
-	if (store.userData.token) navigate("/");
+	// if (store.userData.token) navigate("/");
 	// }, []);
 
 	const [isLogin, setIsLogin] = useState(true);
@@ -28,7 +28,7 @@ export const Login = () => {
 		loginApi(userData).then((data) => {
 			if (data.state) {
 				dispatch({ type: "USERDATA", payload: data.data });
-				navigate("/");
+				// navigate("/");
 			} else {
 				setAuthError(data.data.message);
 			}
@@ -47,7 +47,7 @@ export const Login = () => {
 		signupApi(userData).then((data) => {
 			if (data.state) {
 				dispatch({ type: "USERDATA", payload: data.data });
-				navigate("/");
+				// navigate("/");
 			} else {
 				setAuthError(data.data.message);
 			}
