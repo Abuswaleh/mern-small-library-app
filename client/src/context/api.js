@@ -1,5 +1,6 @@
 import axios from "axios";
-const BASE_URL = "http://localhost:4000";
+// const BASE_URL = "http://localhost:4000";
+const BASE_URL = "https://small-library-app-server.onrender.com";
 
 export async function loginApi(userData) {
 	const url = BASE_URL + "/user/login";
