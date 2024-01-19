@@ -1,0 +1,231 @@
+.app-container {
+	display: flex;
+	flex-direction: column;
+}
+.container {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+/* -------------------button------------ */
+button {
+	background-color: #04aa6d; /* Green */
+	border: 2px solid #ffffff;
+	color: white;
+	padding: 7px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	/* font-size: 16px; */
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	min-width: 70px;
+}
+
+button:hover {
+	border-color: #04aa6d;
+}
+.red {
+	background-color: #e50a0a;
+}
+.red:hover {
+	border-color: #e50a0a;
+}
+.blue {
+	background-color: #0389c7;
+}
+.blue:hover {
+	border-color: #0389c7;
+}
+
+/* form {
+	text-align: center;
+
+	span:hover {
+		cursor: pointer;
+		text-decoration: underline;
+		color: gray;
+	}
+}
+form label {
+	text-align: right;
+}
+form input {
+	border-radius: 3px;
+	border: 1px solid black;
+	outline: none;
+	padding: 2px 5px;
+} */
+form button {
+	/* max-width: 100px; */
+	cursor: pointer;
+}
+.gridForm {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	row-gap: 7px;
+	column-gap: 15px;
+}
+
+.flexCol {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 5px;
+	gap: 5px;
+}
+.main-page {
+	gap: 10px;
+}
+.main-page > * {
+	border: 1px solid rgb(194, 194, 194);
+	padding: 10px;
+	border-radius: 3px;
+	width: 100%;
+}
+.user-control {
+	display: flex;
+	justify-content: space-between;
+	font-size: 20px;
+}
+.user-control span {
+	font-size: 22px;
+	text-transform: capitalize;
+}
+.control-box {
+	display: flex;
+	gap: 10px;
+	justify-content: space-between;
+}
+.filter-control {
+	display: flex;
+	gap: 10px;
+}
+.error {
+	margin: 0px;
+	padding: 0px;
+	font-size: 13px;
+	color: red;
+	font-weight: 600;
+}
+/* ----------------boxBorder---------- */
+.box {
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2),
+		0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* --------------input--------- */
+input {
+	border: 1px solid #ccc;
+	padding: 8px;
+	width: 100%;
+}
+select {
+	border: 1px solid #ccc;
+	padding: 8px;
+	width: 100%;
+	cursor: pointer;
+}
+/* -------------------login--------- */
+.login h1 {
+	padding: 10px 0 30px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.login form {
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2),
+		0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.login form > * {
+	padding: 0px 30px 15px;
+}
+.login h2 {
+	padding: 12px 20px;
+	margin-bottom: 20px;
+	background-color: #009688;
+	color: #fff;
+}
+.login button {
+	width: 150px;
+	background-color: #009688;
+}
+.login .flexCol span {
+	cursor: pointer;
+}
+/* ------------------modal------------ */
+.modal-container {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00000064;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+}
+.modalBox {
+	background-color: white;
+	margin: 10px;
+	border-radius: 3px;
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2),
+		0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.modalBox h3 {
+	padding: 12px 20px;
+	background-color: #009688;
+	color: #fff;
+}
+.modalBox form {
+	padding: 25px;
+}
+.button-panel {
+	display: flex;
+	justify-content: right;
+	align-items: center;
+}
+.button-panel button {
+	margin-left: 5px;
+	margin-top: 15px;
+}
+
+/* ----------table----------------- */
+table {
+	border-collapse: collapse;
+	width: 100%;
+	table-layout: fixed;
+	text-align: center;
+}
+th,
+td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	width: 25%;
+	text-transform: capitalize;
+}
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+td:not(:last-child) {
+	text-align: left;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+th:not(:last-child) {
+	cursor: pointer;
+}
+th {
+	position: relative;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: #04aa6d;
+	color: white;
+}
+th span {
+	position: absolute;
+	right: 10px;
+}

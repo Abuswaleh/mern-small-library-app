@@ -4,6 +4,8 @@ const app = express();
 const userRoute = require("./routes/userRoute");
 const bookRoute = require("./routes/bookRoute");
 
+const cors = require("cors");
+app.use(cors());
 app.use(express.json());
 
 const authValidation = require("./middlewares/authMiddleware");

@@ -22,7 +22,9 @@ const createUser = async (req, res) => {
 		} catch (error) {
 			res.status(400).json({
 				status: "failed",
-				message: error.message,
+				// can be any error,
+				message: "user already exist",
+				// message: error.message,
 			});
 		}
 	} else {
